@@ -183,8 +183,7 @@ public class HttpOnly extends LessonAdapter
 
         try
         {
-            md = MessageDigest.getInstance("SHA");
-            buffer = new Date().toString().getBytes();
+            md = MessageDigest.getInstance("SHA-256");
 
             md.update(buffer);
             value = encoder.encode(md.digest());
